@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="untitled"
+run/main_scene="uid://ku0t07uvsvlg"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=2160
+window/size/viewport_height=1620
