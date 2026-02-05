@@ -1,10 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnnka5th1gldj"]
+[gd_scene load_steps=2 format=3 uid="uid://dvct6yq43rohl"]
 
-[ext_resource type="Texture2D" uid="uid://ocqr4kaowgws" path="res://icon.svg" id="1_mtyf4"]
+[ext_resource type="Script" uid="uid://dh7pj4vlv8q17" path="res://test.gd" id="1_37kl0"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_37kl0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mtyf4")
+[node name="cohesionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 99.0
+offset_right = 943.0
+offset_bottom = 122.0
+text = "cohesion : 0"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="colorLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 112.0
+offset_right = 581.0
+offset_bottom = 135.0
+text = "color palette : 0"
+
+[node name="flavorLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 109.0
+offset_right = 225.0
+offset_bottom = 132.0
+text = "flavor : 0"
+
+[node name="blueLemonScones" type="Button" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 417.0
+offset_right = 1036.0
+offset_bottom = 448.0
+text = "blueberry lemon scones
+- blue
+- light and citrus"
+
+[node name="lilacBoquet" type="Button" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 415.0
+offset_right = 548.0
+offset_bottom = 423.0
+text = "lilac boquet
+- purple
+"
+
+[node name="blueTeaSet" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1220.0
+offset_top = 475.0
+offset_right = 1319.0
+offset_bottom = 529.0
+text = "blue tea set 
+- blue
+"
+
+[node name="strawberrySorbet" type="Button" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 479.0
+offset_right = 413.0
+offset_bottom = 556.0
+text = "strawberry sorbet
+- pink
+- rich and berry"
+
+[connection signal="pressed" from="blueLemonScones" to="." method="_on_blue_lemon_scones_pressed"]
+[connection signal="pressed" from="lilacBoquet" to="." method="_on_lilac_boquet_pressed"]
+[connection signal="pressed" from="blueTeaSet" to="." method="_on_blue_tea_set_pressed"]
+[connection signal="pressed" from="strawberrySorbet" to="." method="_on_strawberrySorbet_pressed"]

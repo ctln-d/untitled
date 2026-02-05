@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="untitled"
-run/main_scene="uid://ku0t07uvsvlg"
+run/main_scene="uid://qi0kes4t768v"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,3 +19,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=2160
 window/size/viewport_height=1620
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
