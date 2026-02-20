@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://odfjwppr015k"]
+
+[ext_resource type="Script" uid="uid://bed6nbqs4r0d5" path="res://item_data.gd" id="1_7qdkm"]
+
+[resource]
+script = ExtResource("1_7qdkm")
+name = "Peppermint"
+tags = Array[String](["decaf"])
+metadata/_custom_type_script = "uid://bed6nbqs4r0d5"

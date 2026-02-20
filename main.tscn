@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcfub1tbypo17"]
+[gd_scene load_steps=16 format=3 uid="uid://dcfub1tbypo17"]
 
 [ext_resource type="Texture2D" uid="uid://c7ftdyb848ll8" path="res://assets/demo bg.jpg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://co44a02oogxe3" path="res://party_controller.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dfw0kcgvykehl" path="res://assets/cards demo/blue magnolia.png" id="2_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://deiicp1y4i6i7" path="res://assets/cards demo/beau rose.png" id="3_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dou0ojpcob3s4" path="res://assets/cards demo/gold white.png" id="4_vivmo"]
@@ -14,6 +15,22 @@
 [ext_resource type="Texture2D" uid="uid://b3fun0a1midv8" path="res://assets/cards demo/sponge cake.png" id="12_d13ii"]
 [ext_resource type="Texture2D" uid="uid://b4n6mes28m468" path="res://assets/cards demo/mini eclairs.png" id="13_1u8w0"]
 
+[sub_resource type="GDScript" id="GDScript_w48qg"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+
+"
+
 [node name="main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -21,6 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w48qg")
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -39,77 +57,77 @@ scale = Vector2(0.52, 0.52)
 layout_mode = 2
 theme_type_variation = &"GraphFrameTitleLabel"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "i am the guest. this is what i want
-and this is blah blah blah"
+text = "hello. i am the guest. this is what i want... blah blah"
 
-[node name="itemContainer" type="HBoxContainer" parent="container"]
+[node name="item_container" type="HBoxContainer" parent="container"]
 layout_mode = 2
 
-[node name="teaSets" type="VBoxContainer" parent="container/itemContainer"]
+[node name="tea_sets" type="VBoxContainer" parent="container/item_container"]
 layout_mode = 2
 
-[node name="blueMag" type="TextureRect" parent="container/itemContainer/teaSets"]
+[node name="blue_mag" type="TextureRect" parent="container/item_container/tea_sets"]
 layout_mode = 2
 texture = ExtResource("2_ycdy4")
 
-[node name="beauRose" type="TextureRect" parent="container/itemContainer/teaSets"]
+[node name="beau_rose" type="TextureRect" parent="container/item_container/tea_sets"]
 layout_mode = 2
 texture = ExtResource("3_w48qg")
 
-[node name="goldWhite" type="TextureRect" parent="container/itemContainer/teaSets"]
+[node name="gold_white" type="TextureRect" parent="container/item_container/tea_sets"]
 layout_mode = 2
 texture = ExtResource("4_vivmo")
 
-[node name="teas" type="VBoxContainer" parent="container/itemContainer"]
+[node name="teas" type="VBoxContainer" parent="container/item_container"]
 layout_mode = 2
 
-[node name="earlGrey" type="TextureRect" parent="container/itemContainer/teas"]
+[node name="earl_grey" type="TextureRect" parent="container/item_container/teas"]
 layout_mode = 2
 texture = ExtResource("5_2cqfq")
 
-[node name="peppermint" type="TextureRect" parent="container/itemContainer/teas"]
+[node name="peppermint" type="TextureRect" parent="container/item_container/teas"]
 layout_mode = 2
 texture = ExtResource("6_yaehf")
 
-[node name="jasmine" type="TextureRect" parent="container/itemContainer/teas"]
+[node name="jasmine" type="TextureRect" parent="container/item_container/teas"]
 layout_mode = 2
 texture = ExtResource("7_074og")
 
-[node name="sandwiches" type="VBoxContainer" parent="container/itemContainer"]
+[node name="sandwiches" type="VBoxContainer" parent="container/item_container"]
 layout_mode = 2
 
-[node name="smokedSalmon" type="TextureRect" parent="container/itemContainer/sandwiches"]
+[node name="smoked_salmon" type="TextureRect" parent="container/item_container/sandwiches"]
 layout_mode = 2
 texture = ExtResource("8_cegan")
 
-[node name="quiche" type="TextureRect" parent="container/itemContainer/sandwiches"]
+[node name="quiche" type="TextureRect" parent="container/item_container/sandwiches"]
 layout_mode = 2
 texture = ExtResource("9_82xsv")
 
-[node name="eggSalad" type="TextureRect" parent="container/itemContainer/sandwiches"]
+[node name="egg_salad" type="TextureRect" parent="container/item_container/sandwiches"]
 layout_mode = 2
 texture = ExtResource("10_getpj")
 
-[node name="desserts" type="VBoxContainer" parent="container/itemContainer"]
+[node name="desserts" type="VBoxContainer" parent="container/item_container"]
 layout_mode = 2
 
-[node name="scones" type="TextureRect" parent="container/itemContainer/desserts"]
+[node name="scones" type="TextureRect" parent="container/item_container/desserts"]
 layout_mode = 2
 texture = ExtResource("11_ryguw")
 
-[node name="sponge" type="TextureRect" parent="container/itemContainer/desserts"]
+[node name="sponge" type="TextureRect" parent="container/item_container/desserts"]
 layout_mode = 2
 texture = ExtResource("12_d13ii")
 
-[node name="eclairs" type="TextureRect" parent="container/itemContainer/desserts"]
+[node name="eclairs" type="TextureRect" parent="container/item_container/desserts"]
 layout_mode = 2
 texture = ExtResource("13_1u8w0")
 
 [node name="feedback" type="Label" parent="container"]
 layout_mode = 2
 
-[node name="finishButton" type="Button" parent="container"]
+[node name="finish_button" type="Button" parent="container"]
 layout_mode = 2
+script = SubResource("GDScript_w48qg")
 
 [node name="result" type="Label" parent="container"]
 layout_mode = 2

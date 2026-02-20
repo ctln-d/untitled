@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://j8p1dou0m5r"]
+
+[ext_resource type="Script" uid="uid://bed6nbqs4r0d5" path="res://item_data.gd" id="1_50svm"]
+
+[resource]
+script = ExtResource("1_50svm")
+name = "Beau Rose"
+tags = Array[String](["pink", "floral"])
+metadata/_custom_type_script = "uid://bed6nbqs4r0d5"

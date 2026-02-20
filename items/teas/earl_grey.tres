@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://byo6t7kdmfjgu"]
+
+[ext_resource type="Script" uid="uid://bed6nbqs4r0d5" path="res://item_data.gd" id="1_p2skg"]
+
+[resource]
+script = ExtResource("1_p2skg")
+name = "Earl Grey"
+tags = Array[String](["neutral"])
+metadata/_custom_type_script = "uid://bed6nbqs4r0d5"
